@@ -1,0 +1,81 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" editable="false" x="0" y="0">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="32" w="532">This function is executed when this Op Mode is selected from the Driver Station.</comment>
+<statement name="STACK">
+<block type="comment" id="Lc#BFtj*NTB48YL;eBl.">
+<field name="COMMENT">Put initialization blocks here.</field>
+<next>
+<block type="linearOpMode_waitForStart" id=":`$wN_ci`O;o6P0~.(+g">
+<next>
+<block type="controls_if" id="}Q?5mbxSO8Di;i!__6[y">
+<value name="IF0">
+<block type="linearOpMode_opModeIsActive" id=")o%YFX/#9kvv^sgXr4~5"/>
+</value>
+<statement name="DO0">
+<block type="controls_whileUntil" id="5AJP].=o$.cd~FU@zOJg">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="linearOpMode_opModeIsActive" id="vJQ8.!FSdXXeZ|Q7W2d6"/>
+</value>
+<statement name="DO">
+<block type="dcMotor_setProperty_Number" id="5/z*k_}*mR=W~DXV1w|U">
+<field name="IDENTIFIER">gripper_motorAsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"gripper_motor"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="D+aOTx3m!XrN*bmE7;5G">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="linearOpMode_sleep_Number" id="xi{:$;?::0u~3UK?92_X">
+<value name="MILLISECONDS">
+<shadow type="math_number" id="g-HbhfZ3!F5sKvw1?hf-">
+<field name="NUM">1000</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Number" id="hL+$%d(N$~PsKQy-$/;v">
+<field name="IDENTIFIER">gripper_motorAsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"gripper_motor"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="{d{1|k|9z=*3#C|XBF57">
+<field name="NUM">0.4</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="2%`7_9JIHho;B1Rvt6!z">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="linearOpMode_opModeIsActive" id="e)cr{!2VIET83s,JWC.="/>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="dcMotor_setProperty_Number" id="Q*c)F$TRkcy)D#(Z.evW" x="0" y="359">
+<field name="IDENTIFIER">gripper_motorAsDcMotor</field>
+<field name="PROP">Power</field>
+<data>{"IDENTIFIER":"gripper_motor"}</data>
+<value name="VALUE">
+<shadow type="math_number" id="O/}EqQ!X=hM?UWYc!Nx]">
+<field name="NUM">0.4</field>
+</shadow>
+</value>
+</block>
+</xml><?xml version='1.0' encoding='UTF-8' standalone='yes' ?><Extra><OpModeMeta flavor="AUTONOMOUS" group="" /><Enabled value="false" /></Extra>
